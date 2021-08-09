@@ -1,6 +1,5 @@
 const ClientError = require('../../exceptions/ClientError');
 
-
 class UsersHandler {
   constructor(service, validator) {
     this._service = service;
@@ -66,7 +65,7 @@ class UsersHandler {
         response.code(error.statusCode);
         return response;
       }
- 
+
       // server ERROR!
       const response = h.response({
         status: 'error',
